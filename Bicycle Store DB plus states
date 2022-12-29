@@ -1,0 +1,14 @@
+--I created a store database
+
+CREATE TABLE bikes (id INTEGER PRIMARY KEY, name TEXT, height INTEGER, price INTEGER, year INTEGER, sold INTEGER);
+INSERT INTO bikes VALUES (1, "Specialized Road", "57cm", "150", "2020", "25");
+INSERT INTO bikes VALUES (2, "Specialized Track", "50cm", "500", "2022", "5");
+INSERT INTO bikes VALUES (3, "Specialized Hybrid", "55cm", "250", "2015", "10");
+INSERT INTO bikes VALUES (4, "Mercier Time Trial", "57cm", "700", "2007", "7");
+INSERT INTO bikes VALUES (5, "Mercier Track", "53cm", "1000", "2012", "18");
+
+--I pulled up the database and ordered it by height
+SELECT * FROM bikes ORDER BY height;
+
+--I also selected the total price of the invetory.
+SELECT SUM(price) FROM bikes; 
